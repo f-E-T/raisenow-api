@@ -1,0 +1,44 @@
+{
+    "name": "fet/raisenow-api",
+    "description": "A PHP implementation of the RaiseNow API",
+    "keywords": ["raisenow", "api"],
+    "license": "MIT",
+    "homepage": "https://github.com/f-e-t/raisenow-api",
+    "support": {
+        "issues": "https://github.com/f-e-t/raisenow-api/issues",
+        "source": "https://github.com/f-e-t/raisenow-api"
+    },
+    "authors": [
+        {
+            "name": "Marc Schulthess",
+            "email": "fet.ca26f02b@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.7",
+        "illuminate/support": "^10.48"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.2",
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^1.10",
+        "nunomaduro/phpinsights": "^2.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fet\\RaiseNowApi\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests/ --testdox --colors",
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
